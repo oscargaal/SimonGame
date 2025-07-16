@@ -35,6 +35,7 @@ $(document).on("keydown", function () {
     if (level === 0) {
         console.log(playable)
         nextSequence()
+        $("#level-title").css("color", "#FEF2BF")
         $("#level-title").text(`Level ${level}`)
     }
 })
@@ -93,15 +94,13 @@ function gamePlay(userChosenColour) {
         playable = false
         console.log("R.i.p");
         playSound("wrong");
-        $("#level-title").css("color", "red").fadeOut(100).fadeIn(100, function () {
-            $(this).css("color", "#FEF2BF");
-        });
+        $("#level-title").css("color", "red").fadeOut(100).fadeIn(100)
 
         setTimeout(() => {
             level = 0;
             userClickedPattern = []
             gamePattern = []
-            $("#level-title").text(`Press a Key to Start`)
+            $("#level-title").text(`GameOver, Press Any Key to Restart`)
         }, 1000);
     }
 }
