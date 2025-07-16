@@ -93,8 +93,8 @@ function gamePlay(userChosenColour) {
         playable = false
         console.log("R.i.p");
         playSound("wrong");
-        $("body").css("background-color", "red").fadeOut(100).fadeIn(100, function () {
-            $(this).css("background-color", "#011F3F");
+        $("#level-title").css("color", "red").fadeOut(100).fadeIn(100, function () {
+            $(this).css("color", "#FEF2BF");
         });
 
         setTimeout(() => {
